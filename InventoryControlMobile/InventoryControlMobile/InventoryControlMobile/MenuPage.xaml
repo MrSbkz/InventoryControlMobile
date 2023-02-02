@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventoryControlMobile.MenuPage">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label x:Name="ScanResult" TextColor="Goldenrod"></Label>
+            <Button
+                VerticalOptions="Center"
+                Text="Scan"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Scan"
+            ></Button>
+            <Button
+                VerticalOptions="Center"
+                Text="Logout"
+                TextColor="White"
+                BackgroundColor="Brown"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Logout"
+            ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

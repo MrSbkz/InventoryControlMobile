@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventoryControlMobile.DevicePage"
+             BackgroundColor="#112B47">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Center" Margin="0,60,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label FontSize="Large" Grid.Row="0" Grid.Column="0" Text="Id:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="0" Grid.Column="1" x:Name="Id" TextColor="Beige" />
+
+                <Label FontSize="Large" Grid.Row="1" Grid.Column="0" Text="Device name:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="1" Grid.Column="1" x:Name="DeviceName" TextColor="Beige" />
+
+                <Label FontSize="Large" Grid.Row="2" Grid.Column="0" Text="Assigned to:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="2" Grid.Column="1" x:Name="AssignedTo" TextColor="Beige" />
+
+                <Label FontSize="Large" Grid.Row="3" Grid.Column="0" Text="Username:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="3" Grid.Column="1" x:Name="Username" TextColor="Beige" />
+
+                <Label FontSize="Large" Grid.Row="4" Grid.Column="0" Text="Register date:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="4" Grid.Column="1" x:Name="RegisterDate" TextColor="Beige" />
+
+                <Label FontSize="Large" Grid.Row="5" Grid.Column="0" Text="Decommission date:" TextColor="WhiteSmoke" />
+                <Label FontSize="Large" Grid.Row="5" Grid.Column="1" x:Name="DecommissionDate" TextColor="Beige" />
+            </Grid>
+            <Button
+                Margin="0,30,0,0"
+                VerticalOptions="Center"
+                Text="Inventory"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_OnInventory">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

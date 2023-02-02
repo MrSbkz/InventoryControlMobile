@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,8 +12,10 @@ namespace InventoryControlMobile
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            var token = Preferences.Get("token", null);
+            MainPage = !string.IsNullOrWhiteSpace(token)
+                ? new NavigationPage(new MenuPage())
+                : new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
