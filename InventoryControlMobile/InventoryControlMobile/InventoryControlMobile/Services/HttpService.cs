@@ -30,6 +30,21 @@ namespace InventoryControlMobile.Services
                 var result = await response.Content.ReadAsStringAsync();
                 return result;
             }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static async Task<string> GetRolesAsync()
+        {
+            try
+            {
+                Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Preferences.Get("token", null));
+                var response = await Client.GetAsync("role/user/list");
+                var result = await response.Content.ReadAsStringAsync();
+                return result;
+            }
             catch (Exception e)
             {
                 return null;
@@ -48,7 +63,7 @@ namespace InventoryControlMobile.Services
                 var result = await response.Content.ReadAsStringAsync();
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -64,7 +79,7 @@ namespace InventoryControlMobile.Services
                 var result = await response.Content.ReadAsStringAsync();
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
